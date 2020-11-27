@@ -42,5 +42,17 @@ namespace Swagger.Demo.Controllers
             })
             .ToArray();
         }
+        
+             /// <summary>
+        /// 这是一个api测试
+        /// </summary>
+        /// <param name="id">用户的id</param>
+        /// <returns>一个字符串</returns>
+        /// <remarks>下面的httpget是必须项，否则swagger无法显示</remarks>
+        [HttpGet("{id}", Name = "Get")]
+        public string Get(int id)
+        {
+            return "1";
+        }
     }
 }
